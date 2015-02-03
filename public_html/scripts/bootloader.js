@@ -42,7 +42,12 @@ var FIRST_REQUIRE_LIST= [
     'angular',
     'angularRoute',
     'jquery',
-    'main-starter'
+    'main-starter',
+    "filters",
+    "directives",
+    'controllers',
+    'services',
+    'routes'
 ];
 
 
@@ -52,29 +57,39 @@ require(FIRST_REQUIRE_LIST,
     //function called once you require the first files list, with the files in common between mobile and web
     function () {
         
-        
+        //bootstrap TestJamgleWebapp angular application
         angular.bootstrap(document, ['TestJamgleWebapp']);
         
-        
+        //remove jquerymobile page events avoiding conflicts with Angular Route
         $(document).bind("mobileinit", function () {
             $.mobile.ajaxEnabled = false;
             $.mobile.linkBindingEnabled = false;
             $.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
         });
+        
+        
+        /**
+         * Detect if is mobile device
+         */
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            //here require the jquery mobile framework
+            console.log("Mobile Device");
+        }
+        else{
+            console.log("Web Device");
+        }
+        
 
-        
-        
-        
+        //if is mobile, require also jqueryMobile
         require(['jqueryMobile'], function(){
+            //here you loaded the jquery mobile framework
             if ($.mobile) {
                 console.log("Jquery mobile is working");
             } else {
                 console.log("Jquery mobile is not working");
             } 
         });
-        
-        
         
         
 });

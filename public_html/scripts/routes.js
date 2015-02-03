@@ -1,6 +1,6 @@
 'use strict';
 
-define(['app'], function (app) {
+define(['main-starter'], function (app) {
     return app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/view1', {
             templateUrl: 'partials/partial1.html',
