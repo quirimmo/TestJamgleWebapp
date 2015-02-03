@@ -1,11 +1,12 @@
 'use strict';
 
+
 define(['angular'], function() {
-    return angular.module('myApp', [
+    return angular.module('TestJamgleWebapp', [
         'ngRoute',
-        'myApp.filters',
-        'myApp.services',
-        'myApp.directives',
-        'myApp.controllers'
+        'TestJamgleWebapp.filters',
+        'TestJamgleWebapp.services',
+        'TestJamgleWebapp.directives',
+        'TestJamgleWebapp.controllers'
     ]);
 });
