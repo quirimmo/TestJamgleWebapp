@@ -60,7 +60,7 @@ require(FIRST_REQUIRE_LIST,
     function () {
         
         //bootstrap TestJamgleWebapp angular application
-        angular.bootstrap(document, ['TestJamgleWebapp']);
+        jamgleApp= angular.bootstrap(document, ['TestJamgleWebapp']);
         
 
         //remove jquerymobile page events avoiding conflicts with Angular Route

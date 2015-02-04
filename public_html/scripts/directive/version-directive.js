@@ -1,41 +1,28 @@
 'use strict';
 
-define(['main-starter'], function (mainStarter) {
-    
-    return jamgleApp.directive('appVersion', ['VersionService', function (VersionService) {
+define(function () {
+    return ['VersionService', function(VersionService) {
             
-        var obj = {
-            restrict: 'E',
-            scope: {
-            },
-            replace: true,
-            controller: function($scope) {
-                
-                $scope.version= VersionService.version;
-                
-                $scope.init = function() {
-                    console.log("INIT VERSION DIRECTIVE CONTROLLER");
-                };
+            var obj= {
+                restrict: 'E',
+                scope: {
+                },
+                replace: true,
+                controller: function ($rootScope, $scope, $element) {
 
-                $scope.init();
+                    $scope.version = VersionService.version;
+                    $scope.test= "TESTTTT";
+                    
+                    $scope.init = function () {
+                        console.log("INIT VERSION DIRECTIVE CONTROLLER");
+                    };
 
-            },
-            templateUrl: 'views/partials/app-version.html'
-        };
+                    $scope.init();
 
-        obj.controller.$inject = ['$scope'];
-
-        return obj;
-
-    }]);
-
+                },
+                templateUrl: 'views/partials/app-version.html'
+            };
+            
+            return obj;
+    }];
 });
-
-
-//define(function () {
-//    return ['VersionService', function(versionService) {
-//        return function(scope, elm, attrs) {
-//            elm.text(versionService.version);
-//        };
-//    }];
-//});
