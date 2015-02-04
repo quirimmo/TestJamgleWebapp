@@ -12,6 +12,7 @@ define(function () {
 
                     $scope.version = VersionService.version;
                     $scope.test= "TESTTTT";
+                    $scope.serviceTest= VersionService.test;
                     
                     $scope.init = function () {
                         console.log("INIT VERSION DIRECTIVE CONTROLLER");

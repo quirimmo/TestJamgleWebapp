@@ -8,6 +8,9 @@ define(['main-starter'], function (app) {
         $routeProvider.when('/view2', {
             templateUrl: 'views/partial2.html',
             controller: 'MyController2'});
+        $routeProvider.when('/test', {
+            templateUrl: 'views/test.html',
+            controller: 'MainTestCtrl'});
         $routeProvider.otherwise(
             {redirectTo: '/view1'});
     }]);
