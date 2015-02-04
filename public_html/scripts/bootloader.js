@@ -37,6 +37,7 @@ require.config({
 
 window.name = "NG_DEFER_BOOTSTRAP!";
 
+
 //first required list in common with jamgle mobile and jamgle webapp
 var FIRST_REQUIRE_LIST= [
     'angular',
@@ -51,6 +52,7 @@ var FIRST_REQUIRE_LIST= [
 ];
 
 
+var jamgleApp;
 
 require(FIRST_REQUIRE_LIST, 
     
@@ -58,8 +60,9 @@ require(FIRST_REQUIRE_LIST,
     function () {
         
         //bootstrap TestJamgleWebapp angular application
-        angular.bootstrap(document, ['TestJamgleWebapp']);
+        jamgleApp= angular.bootstrap(document, ['TestJamgleWebapp']);
         
+
         //remove jquerymobile page events avoiding conflicts with Angular Route
         $(document).bind("mobileinit", function () {
             $.mobile.ajaxEnabled = false;
