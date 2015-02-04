@@ -1,11 +1,10 @@
 'use strict';
 
 
-
 //define the angular TestJamgleWebapp application
 define(['angular'], function() {
     
-    return angular.module('TestJamgleWebapp',
+    jamgleApp= angular.module('TestJamgleWebapp',
         [
             'ngRoute',
             'TestJamgleWebapp.filters',
@@ -14,6 +13,7 @@ define(['angular'], function() {
             'TestJamgleWebapp.controllers'
         ]
     ); 
-
+    return jamgleApp;
+    
 });
 

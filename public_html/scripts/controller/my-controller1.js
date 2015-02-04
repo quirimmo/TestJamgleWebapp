@@ -1,10 +1,9 @@
 'use strict';
 
-define(function () {
-    return ['$scope', function ($scope) {}];
+define(['main-starter'], function(mainStarter){
+    jamgleApp.controller('MyController1', function ($scope) {    
+            
+        $scope.message = "Message from MyController1"; 
+        
+    });
 });
-
-
-//jamgleApp.controller("MyController1", function($scope){
-//    return[];
-//});
