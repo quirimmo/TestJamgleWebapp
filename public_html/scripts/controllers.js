@@ -6,5 +6,3 @@ define(function (require) {
         controller('MyController2', require('controller/my-controller2')).
         controller('MainTestCtrl', require('controller/main-test-ctrl'));
 });
-
-

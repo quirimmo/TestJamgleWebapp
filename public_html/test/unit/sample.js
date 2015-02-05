@@ -1,20 +1,19 @@
-describe('Unit: TestController', function () {
+'use strict';
 
+describe('TestJamgleWebapp module', function () {
 
-    beforeEach(module('jamgleApp'));
-    
-    it('should create run per dio', inject(function($controller) {
-        var scope = {};
-        var ctrl = $controller('MainTestCtrl', {$scope:scope});
-        expect(scope.test).toBe(3);
-    }));
+    beforeEach(module('TestJamgleWebapp'));
 
-    
-    it('contains a passing spec', function () {
-        expect(true).toBe(true);
+    describe('TestJamgleWebapp controller', function () {
+
+        it('should ....', inject(function ($controller) {
+            //spec body
+            var view1Ctrl = $controller('MainTestCtrl');
+            expect(view1Ctrl).toBeDefined();
+        }));
+
     });
-    it('contains another passing spec', function () {
-        expect(false).not.toBe(true);
-    });
-    
 });
+
+console.log("AAVBVVV");
+console.log("ASDADASDAS");
