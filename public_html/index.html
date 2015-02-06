@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
     
     <head>
         <meta charset="utf-8">
         <title>Test Jamgle Webapp</title>
         
         <link href="scripts/components/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css" type="text/css" rel="stylesheet" />
-        <link href="css/style.css" type="text/css" rel="stylesheet" />
+        
+        <link href="css/style.less" type="text/css" rel="stylesheet/less" />
         
         <style>
             [ng-cloak] {
@@ -18,7 +19,6 @@
     </head>
 
     
-    
     <body ng-cloak>
 
         
@@ -26,24 +26,16 @@
             <li><a href="#/view1">view1</a></li>
             <li><a href="#/view2">view2</a></li>
         </ul>
-
         
         <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        
         <div ng-view></div>
         
-        
         <div>Angular seed app: v <app-version></app-version></div>
-        <!--<div>Angular seed app: v<span app-version></span></div>-->
         
-        
-        
-        <!--<script data-main="js/boot" src="scripts/components/requirejs/require.js"></script>-->
         <script data-main="scripts/bootloader" src="scripts/components/requirejs/require.js"></script>
-        
         
     </body>
     

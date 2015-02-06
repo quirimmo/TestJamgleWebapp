@@ -1,5 +1,8 @@
 'use strict';
 
+
+console.log("SAMPLE");
+
 describe('TestJamgleWebapp module', function () {
 
     beforeEach(module('TestJamgleWebapp'));

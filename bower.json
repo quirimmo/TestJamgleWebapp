@@ -26,6 +26,7 @@
     "requirejs-text": "~2.0.13",
     "requirejs-plugins": "~1.0.2",
     "jquery-mobile-bower": "~1.4.5",
-    "karma-ng-scenario": "~0.1.0"
+    "karma-ng-scenario": "~0.1.0",
+    "less": "~2.3.1"
   }
 }

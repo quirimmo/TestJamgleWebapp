@@ -10,6 +10,7 @@ require.config({
         jquery: 'components/jquery/dist/jquery',
         jqueryMobile: 'components/jquery-mobile-bower/js/jquery.mobile-1.4.5.min',
         text: 'components/requirejs-text/text',
+        less: 'components/less/dist/less.min',
         mainStarter: 'main-starter'
     },
     shim: {
@@ -40,6 +41,7 @@ window.name = "NG_DEFER_BOOTSTRAP!";
 
 //first required list in common with jamgle mobile and jamgle webapp
 var FIRST_REQUIRE_LIST= [
+    'less',
     'angular',
     'angularRoute',
     'jquery',
@@ -62,6 +64,7 @@ require(FIRST_REQUIRE_LIST,
         //bootstrap TestJamgleWebapp angular application
         jamgleApp= angular.bootstrap(document, ['TestJamgleWebapp']);
         
+        console.log("Bootstrapped TestJamgleWebapp");
 
         //remove jquerymobile page events avoiding conflicts with Angular Route
         $(document).bind("mobileinit", function () {
